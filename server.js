@@ -21,7 +21,7 @@ app.get('/play', (req, res) => {
 })
 
 app.get('/developers', (req, res) => {
-    res.send('developers')
+    res.render('developers', { title: 'Developers' })
 })
 
 app.get('/help', (req, res) => {

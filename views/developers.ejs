@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/developers.css" type="text/css">
+
+    <body>
+
+        <div class="menu-icon">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2" />
+                <path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z" />
+            </svg>
+        </div>
+
+        <div class="menu">
+            <span class="close-menu-icon">x</span>
+            <div class="menu-buttons">
+                <a href="/">ana sayfa</a>
+                <a href="/play">oyna</a>
+                <a href="/help">yardım</a>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <%- include('./partials/header.ejs') %>
+
+                <div class="developer-container">
+
+                    <div class="sub-container">
+                        <img src="https://pbs.twimg.com/media/D2lKatmWkAAOhoa?format=jpg&name=medium" alt="dev-pic"
+                            class="dev-img" width="200" height="200">
+                        <h1 class="dev-title">Fatih Genç</h1>
+                        <p class="dev-info">
+                            Merhabalar, ben bu uygulamanın yani Tangram oyununun geliştiricisi Fatih Genç. 21 yaşındayım
+                            ve şu anda Manisa Celal Bayar Üniversitesi yazılım mühendisliği bölümü 3.sınıf öğrencisiyim.
+                            Genellikle web uygulamalarıyla ilgileniyorum ve daha çok back-end uygulamaları geliştirmeye
+                            çalışıyorum.
+                        </p>
+                    </div>
+                </div>
+
+        </div>
+
+        <script>
+            const closeIcon = $('.close-menu-icon')
+            const menu = $('.menu')
+            const menuIcon = $('.menu-icon')
+
+            $(document).ready(() => {
+                // opening menu
+                menuIcon.on('click', e => {
+                    e.preventDefault()
+
+                    menu.css('display', 'flex')
+                })
+
+                // closing menu
+                closeIcon.on('click', e => {
+                    e.preventDefault()
+
+                    menu.css('display', 'none')
+                })
+            })
+        </script>
+    </body>
+
+</html>
