@@ -7,31 +7,46 @@
 
         <%- include('./partials/nav.ejs') %>
 
-        <div class="container">
-            
-            <div class="title-container">
-                <img src="/images/logo.png" alt="Logo" width="232" height="181">
-                <h2 class="title">TANGRAM</h2>
+            <div class="container">
+
+                <div class="title-container">
+                    <img src="/images/logo.png" alt="Logo" width="232" height="181">
+                    <h2 class="title">TANGRAM</h2>
+                </div>
+
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/play">OYNA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/developers">GELİŞTİRİCİLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/help">YARDIM</a>
+                    </li>
+                </ul>
             </div>
 
-            <ul class="nav">
-                <li class="nav-item">
-                    <a href="/play">OYNA</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/developers">GELİŞTİRİCİLER</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/help">YARDIM</a>
-                </li>
-            </ul>
-        </div>
+            <script>
+                const firstNav = $('.nav-item:nth-child(1)')
+                const secNav = $('.nav-item:nth-child(2)')
+                const thirdNav = $('.nav-item:nth-child(3)')
 
-        <script>
-            $(document).ready(() => {
-                // $('.box').draggable()
-            })
-        </script>
+                $(document).ready(() => {
+                    firstNav.css({
+                        opacity: 1,
+                        transform: 'translateY(0)'
+                    })
+                    secNav.css({
+                        opacity: 1,
+                        transform: 'translateY(0)'
+                    })
+                    thirdNav.css({
+                        opacity: 1,
+                        transform: 'translateY(0)'
+                    })
+                })
+            </script>
     </body>
 
 </html>
