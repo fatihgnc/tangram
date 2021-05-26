@@ -17,7 +17,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/play', (req, res) => {
-    res.send('game')
+    res.render('play', {
+        title: 'Play',
+        menu: [
+            { href: '/', text: 'ana sayfa' },
+            { href: '/developers', text: 'geliştiriciler' },
+            { href: '/help', text: 'yardım' }
+        ]   
+    })
 })
 
 app.get('/developers', (req, res) => {
