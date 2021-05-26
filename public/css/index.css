@@ -17,9 +17,6 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-/* ----MENU---- */
-
-
 .container {
     position: relative;
     width: 100vw;
@@ -49,6 +46,8 @@ html {
     border-bottom: thin solid black;
     margin-top: .25em;
 }
+
+/* ----TITLE END---- */
 
 /* ----NAV---- */
 .nav-container{
@@ -139,3 +138,5 @@ html {
 .nav-item:hover a {
     margin-left: 3%;
 }
+
+/* ----NAV END---- */

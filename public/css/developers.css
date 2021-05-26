@@ -91,6 +91,8 @@ svg {
     border-bottom: thick solid white;
 }
 
+/* ----MENU END---- */
+
 .container {
     position: relative;
     width: 100vw;
@@ -120,6 +122,8 @@ svg {
     border-bottom: thin solid black;
     margin-top: .25em;
 }
+
+/* ----TITLE END---- */
 
 /* ----DEVELOPER---- */
 .developer-container {
@@ -151,3 +155,5 @@ svg {
     font-size: 1.5em;
     font-weight: 400;
 }
+
+/* ----DEVELOPER END---- */

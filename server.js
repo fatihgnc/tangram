@@ -21,11 +21,25 @@ app.get('/play', (req, res) => {
 })
 
 app.get('/developers', (req, res) => {
-    res.render('developers', { title: 'Developers' })
+    res.render('developers', { 
+        title: 'Developers',
+        menu: [
+            { href: '/', text: 'ana sayfa' },
+            { href: '/play', text: 'oyna' },
+            { href: '/help', text: 'yardım' }
+        ]   
+    })
 })
 
 app.get('/help', (req, res) => {
-    res.send('help')
+    res.render('help', { 
+        title: 'Help',
+        menu: [
+            { href: '/', text: 'ana sayfa' },
+            { href: '/developers', text: 'geliştiriciler' },
+            { href: '/play', text: 'oyna' }
+        ]    
+    })
 })
 
 app.listen(PORT, () => console.log('listening on port ' + PORT))
