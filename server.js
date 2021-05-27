@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home' })
 })
 
-app.get('/play', (req, res) => {
-    res.render('play', {
-        title: 'Play',
+app.get('/choose-level', (req, res) => {
+    res.render('levels', {
+        title: 'Choose Level',
         menu: [
             { href: '/', text: 'ana sayfa' },
             { href: '/developers', text: 'geliştiriciler' },
@@ -32,7 +32,7 @@ app.get('/developers', (req, res) => {
         title: 'Developers',
         menu: [
             { href: '/', text: 'ana sayfa' },
-            { href: '/play', text: 'oyna' },
+            { href: '/choose-leve', text: 'oyna' },
             { href: '/help', text: 'yardım' }
         ]   
     })
@@ -44,7 +44,7 @@ app.get('/help', (req, res) => {
         menu: [
             { href: '/', text: 'ana sayfa' },
             { href: '/developers', text: 'geliştiriciler' },
-            { href: '/play', text: 'oyna' }
+            { href: '/choose-level', text: 'oyna' }
         ]    
     })
 })
