@@ -25,30 +25,6 @@ html {
     flex-direction: column;
 }
 
-/* ----TITLE---- */
-.title-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 2;
-}
-
-.title {
-    letter-spacing: 10px;
-    font-size: 64px;
-    font-weight: 900;
-}
-
-.page {
-    font-size: 2em;
-    border-bottom: thin solid black;
-    margin-top: .25em;
-}
-
-/* ----TITLE END---- */
-
 /* ----DEVELOPER---- */
 .developer-container {
     flex: 4;
