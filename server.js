@@ -32,7 +32,7 @@ app.get('/developers', (req, res) => {
         title: 'Developers',
         menu: [
             { href: '/', text: 'ana sayfa' },
-            { href: '/choose-leve', text: 'oyna' },
+            { href: '/choose-level', text: 'oyna' },
             { href: '/help', text: 'yardım' }
         ]   
     })
