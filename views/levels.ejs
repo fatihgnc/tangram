@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %>
-<link rel="stylesheet" href="/css/play.css">
+<link rel="stylesheet" href="/css/levels.css">
 
 <body>
     
@@ -10,12 +10,66 @@
     <div class="container">
         <%- include('./partials/header.ejs') %>
 
-        <div class="content-container">
+        <div class="levels-container">
             <div class="sub-container">
-                
-            </div>
+               
+                <!-- KOLAY LEVEL -->
+                <div class="easy-level">
+                    <h1 class="easy-title" style="writing-mode: tb-rl;">KOLAY</h1>
+                    <ul class="levels">
+                        <li>
+                            <a href="/play-easy-1"><strong>Kolay</strong> - Level 1</a>
+                        </li>
+                        <li>
+                            <a href="/play-easy-2"><strong>Kolay</strong> - Level 2</a>
+                        </li>
+                        <li>
+                            <a href="/play-easy-3"><strong>Kolay</strong> - Level 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- KOLAY LEVEL END -->
+
+                <!-- ORTA LEVEL-->
+                <div class="med-level">
+                    <h1 class="med-title" style="writing-mode: tb-rl;">ORTA</h1>
+                    <ul class="levels">
+                        <li>
+                            <a href="/play-med-1"><strong>Orta</strong> - Level 1</a>
+                        </li>
+                        <li>
+                            <a href="/play-med-2"><strong>Orta</strong> - Level 2</a>
+                        </li>
+                        <li>
+                            <a href="/play-med-2"><strong>Orta</strong> - Level 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ORTA LEVEL END -->
+
+                <!-- HARD LEVEL -->
+                <div class="hard-level">
+                    <h1 class="hard-title" style="writing-mode: tb-rl;">ZOR</h1>
+                    <ul class="levels">
+                        <li>
+                            <a href="/play-hard-1"><strong>Zor</strong> - Level 1</a>
+                        </li>
+                        <li>
+                            <a href="/play-hard-2"><strong>Zor</strong> - Level 2</a>
+                        </li>
+                        <li>
+                            <a href="/play-hard-2"><strong>Zor</strong> - Level 3</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- HARD LEVEL END -->
+            </div>  
         </div>
+
+        <%- include('./partials/footer.ejs') %>
     </div>
+
+    
 
     <script src="/js/menu-operations.js" defer></script>
 </body>

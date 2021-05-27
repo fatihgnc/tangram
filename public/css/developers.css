@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
 
+/* common stylings */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -25,6 +26,8 @@ html {
     flex-direction: column;
 }
 
+/* common stylings end */
+
 /* ----DEVELOPER---- */
 .developer-container {
     flex: 4;
@@ -35,7 +38,7 @@ html {
     width: 50%;
     text-align: center;
     margin: 0 auto;
-    padding-top: 5em;
+    padding-top: 8em;
 }
 
 .dev-img {
@@ -47,7 +50,7 @@ html {
 .dev-title {
     text-align: left;
     font-size: 3em;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .dev-info {

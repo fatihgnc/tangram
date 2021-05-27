@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap');
 
+/* common stylings */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -24,6 +25,8 @@ html {
     display: flex;
     flex-direction: column;
 }
+
+/* common stylings end */
 
 /* ----NAV---- */
 .nav-container{
