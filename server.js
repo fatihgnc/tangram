@@ -53,13 +53,13 @@ app.get('/help', (req, res) => {
 app.get('/play', (req, res) => {
     
     let level = req.query.level
-    let piecesFolder = `./public/images/pieces/${level}/`
+    let piecesFolder = `./public/images/targets/pieces/${level}/`
     let pieces = []
 
     // getting file names from the pieces folder
     fs.readdirSync(piecesFolder)
         .forEach(piece => {
-            piece = `/images/pieces/${level}/` + piece
+            piece = `/images/targets/pieces/${level}/` + piece
             pieces.push(piece)
         })
 
