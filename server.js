@@ -49,4 +49,17 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/play', (req, res) => {
+    let level = req.query.level
+    res.render('play', {
+        title: `Play - ${req.query.level}`,
+        menu: [
+            { href: '/', text: 'ana sayfa' },
+            { href: '/choose-level', text: 'oyna' },
+            { href: '/help', text: 'yardım' }
+        ],
+        src: `/images/${level}crop.png`   
+    })
+})
+
 app.listen(PORT, () => console.log('listening on port ' + PORT))
