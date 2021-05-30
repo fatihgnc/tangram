@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express()
 
@@ -50,7 +51,18 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/play', (req, res) => {
+    
     let level = req.query.level
+    let piecesFolder = `./public/images/pieces/${level}/`
+    let pieces = []
+
+    // getting file names from the pieces folder
+    fs.readdirSync(piecesFolder)
+        .forEach(piece => {
+            piece = `/images/pieces/${level}/` + piece
+            pieces.push(piece)
+        })
+
     res.render('play', {
         title: `Play - ${req.query.level}`,
         menu: [
@@ -58,8 +70,11 @@ app.get('/play', (req, res) => {
             { href: '/choose-level', text: 'oyna' },
             { href: '/help', text: 'yardım' }
         ],
-        src: `/images/${level}crop.png`   
+        targetPic: `${level}.png`,
+        pieces   
     })
+    
+    
 })
 
 app.listen(PORT, () => console.log('listening on port ' + PORT))
