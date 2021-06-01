@@ -12,7 +12,11 @@
         <div class="game-container">
 
            
-            <img src="/images/targets/<%= targetPic %>" alt="target pic">
+            <div class="target-container">
+                <span title="go previous level" class="previous hidden">←</span>
+                <img src="/images/targets/<%= targetPic %>" alt="target pic">
+                <span title="go next level" class="next hidden">→</span>
+            </div>
 
             <div class="pieces-container">
                 <% for(let i = 0; i < pieces.length; i++) { %>
@@ -28,8 +32,72 @@
     <script src="/js/menu-operations.js" defer></script>
     <script>
         $(document).ready(function() {
+            // selecting elements
             let images = $('.pieces-container>img')
+            let prevArrow = $('.target-container .previous')
+            let nextArrow = $('.target-container .next')
+
+            // making pieces draggable
             images.draggable()
+
+            // getting query string
+            let [unnecessary, level] = window.location.href.split('=')
+            
+            // adjusting appearance of previous and next level buttons
+            if (level === 'easy1') {
+                nextArrow.removeClass('hidden')
+            } else if (level === 'hard3') {
+                prevArrow.removeClass('hidden')
+            } else {
+                prevArrow.removeClass('hidden')
+                nextArrow.removeClass('hidden')
+            }            
+
+            // going to next level when clicked
+            nextArrow.on('click', e => {
+                // getting current difficulty and stage
+                let difficulty = level.split(/\d/)[0], 
+                stage = level.split(/(y|d)/)[2]
+
+                if(level === 'easy3') {
+                    difficulty = 'med'
+                    stage = 1
+                } else if (level === 'med3') {
+                    difficulty = 'hard'
+                    stage = 1
+                } else {
+                    stage++
+                }
+                
+                // redirecting to the next level
+                window.location.href = `http://localhost:3000/play?level=${difficulty + stage}`
+            })
+
+            // going to previous level
+            prevArrow.on('click', e => {
+                // getting current level and stage
+                let difficulty = level.split(/\d/)[0], 
+                stage = level.split(/(y|d)/)[2]
+                
+                if(level === 'med1') {
+                    difficulty = 'easy'
+                    stage = 3
+                } else if (level === 'hard1') {
+                    difficulty = 'med'
+                    stage = 3
+                } else {
+                    stage--
+                }
+                
+                // redirecting to previous level
+                window.location.href = `http://localhost:3000/play?level=${difficulty + stage}`
+            })
+
+            setTimeout(() => {
+                // removing click events if the arrows are hidden
+                if(nextArrow.css('opacity') == 0) nextArrow.off()
+                if(prevArrow.css('opacity') == 0) prevArrow.off()
+            }, 100)
         })
     </script>
 </body>

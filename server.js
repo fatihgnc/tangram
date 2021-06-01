@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home' })
 })
 
-app.get('/choose-level', (req, res) => {
+app.get('/levels', (req, res) => {
     res.render('levels', {
         title: 'Choose Level',
         menu: [
@@ -33,7 +33,7 @@ app.get('/developers', (req, res) => {
         title: 'Developers',
         menu: [
             { href: '/', text: 'ana sayfa' },
-            { href: '/choose-level', text: 'oyna' },
+            { href: '/levels', text: 'oyna' },
             { href: '/help', text: 'yardım' }
         ]   
     })
@@ -45,7 +45,7 @@ app.get('/help', (req, res) => {
         menu: [
             { href: '/', text: 'ana sayfa' },
             { href: '/developers', text: 'geliştiriciler' },
-            { href: '/choose-level', text: 'oyna' }
+            { href: '/levels', text: 'oyna' }
         ]    
     })
 })
@@ -67,7 +67,7 @@ app.get('/play', (req, res) => {
         title: `Play - ${req.query.level}`,
         menu: [
             { href: '/', text: 'ana sayfa' },
-            { href: '/choose-level', text: 'oyna' },
+            { href: '/levels', text: 'oyna' },
             { href: '/help', text: 'yardım' }
         ],
         targetPic: `${level}.png`,

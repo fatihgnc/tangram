@@ -38,10 +38,35 @@ html {
     flex-direction: column;
 }
 
+.target-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.target-container span {
+    font-size: 2em;
+    padding: .25em .5em;
+    cursor: pointer;
+    border: thin solid black;
+    display: inline-block;
+    transition: all .2s ease;
+}
+
+.target-container span:hover {
+    background-color: black;
+    color: white;
+}
+
 .pieces-container {
     text-align: center;
     padding: 1em;
     width: 100%;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 /* ----PLAY STYLINGS END---- */
