@@ -48,6 +48,20 @@ html {
     overflow-y: hidden;
 }
 
+@media screen and (max-width: 1375px) {
+    .nav {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .nav {
+        width: 90%;
+        gap: 2em;
+    }
+}
+
+
 .nav-item {
     position: relative;
     background: rgba(255,255,255,.25);
@@ -117,4 +131,16 @@ html {
     margin-left: 3%;
 }
 
+@media screen and (max-width: 450px) {
+    .nav-item a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-item a {
+        font-size: 22px;
+    }
+}
+    
 /* ----NAV END---- */
